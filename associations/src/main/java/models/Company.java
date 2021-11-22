@@ -3,7 +3,9 @@
  */
 package models;
 
-import java.util.Collection;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,7 +25,7 @@ public class Company {
     private String name;
     
     @OneToMany(mappedBy="company")
-    private Collection<Employee> employees;
+	private List<Employee> employees=new ArrayList<Employee>();	
     
 	/**
 	 * @return the name
@@ -47,14 +49,14 @@ public class Company {
 	/**
 	 * @return the employees
 	 */
-	public Collection<Employee> getEmployees() {
+	public List<Employee> getEmployees() {
 		return employees;
 	}
 
 	/**
 	 * @param employees the employees to set
 	 */
-	public void setEmployees(Collection<Employee> employees) {
+	public void setEmployees(List<Employee> employees) {
 		this.employees = employees;
 	}
 	
