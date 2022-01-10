@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>La bibliotheque</title>
+</head>
+<body>
+	<h1 th:inline="text">Bonjour !</h1>
+	
+	<h2>Vous etes dans la bibliotheque.</h2>
+
+	<form th:action="@{/recupererLecteurs}" method="get">
+		<input type="submit" value="Verifier les lecteurs" />
+	</form>
+</body>
+</html>
